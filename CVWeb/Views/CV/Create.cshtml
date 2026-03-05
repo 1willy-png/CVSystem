@@ -1,0 +1,42 @@
+﻿@model CVSystem.Models.CV
+
+@{
+    ViewData["Title"] = "Submit CV";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-primary mb-4">Submit Your CV</h2>
+
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input asp-for="FullName" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input asp-for="Phone" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Education</label>
+                <textarea asp-for="Education" class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Experience</label>
+                <textarea asp-for="Experience" class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Skills</label>
+                <textarea asp-for="Skills" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                Submit CV
+            </button>
+        </form>
+    </div>
+</div>
