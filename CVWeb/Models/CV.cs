@@ -7,21 +7,27 @@ namespace CVSystem.Models
         public int Id { get; set; }
 
         [Required]
-        public string FullName { get; set; }
+        public string?
+            FullName { get; set; }
 
         [Required]
-        public string Phone { get; set; }
+        public string?
+            Phone { get; set; }
 
         [Required]
-        public string Education { get; set; }
+        public string?
+            Education { get; set; }
 
         [Required]
-        public string Experience { get; set; }
+        public string?
+            Experience { get; set; }
 
         [Required]
-        public string Skills { get; set; }
+        public string?
+            Skills { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
+        public User?
+            User { get; set; }
     }
 }

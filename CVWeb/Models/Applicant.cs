@@ -7,11 +7,13 @@ namespace CVSystem.Models
         public int Id { get; set; }
 
         [Required]
-        public string FullName { get; set; }
+        public string?
+            FullName { get; set; }
 
         [Required]
-        public string Email { get; set; }
+        public string?  Email { get; set; }
 
-        public string CvFilePath { get; set; }
+        public string?
+            CvFilePath { get; set; }
     }
 }

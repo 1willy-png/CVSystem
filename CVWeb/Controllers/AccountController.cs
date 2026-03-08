@@ -54,7 +54,7 @@ namespace CVSystem.Controllers
             {
                 // 🔥 STORE SESSION HERE
                 HttpContext.Session.SetInt32("UserId", user.Id);
-                HttpContext.Session.SetString("UserEmail", user.Email);
+                HttpContext.Session.SetString("UserEmail", user.Email ?? "");
 
                 return RedirectToAction("Dashboard");
             }
