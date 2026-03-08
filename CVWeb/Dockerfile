@@ -1,10 +1,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY . .
+COPY CVWeb/CVSystem.csproj CVWeb/
+RUN dotnet restore CVWeb/CVSystem.csproj
 
-RUN dotnet restore ./CVSystem.csproj
-RUN dotnet publish ./CVSystem.csproj -c Release -o /app/publish
+COPY CVWeb/. ./CVWeb/
+WORKDIR /src/CVWeb
+
+RUN dotnet publish CVSystem.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
