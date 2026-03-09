@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 
-var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+string? databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
 string connectionString;
 
