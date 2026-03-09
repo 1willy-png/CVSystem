@@ -20,7 +20,7 @@ if (!string.IsNullOrEmpty(databaseUrl))
 }
 else
 {
-    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 }
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
