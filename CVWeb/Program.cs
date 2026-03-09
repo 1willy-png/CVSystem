@@ -38,12 +38,11 @@ app.MapControllerRoute(
 
 app.UseSession();
 
-// Run migrations automatically
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.Migrate();
-}
+// using (var scope = app.Services.CreateScope())
+// {
+//     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//     db.Database.Migrate();
+// }
 
 // Render deployment port
 var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
